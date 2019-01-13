@@ -1,0 +1,16 @@
+PODS:
+  - Cwift (0.1)
+
+DEPENDENCIES:
+  - Cwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cwift
+
+SPEC CHECKSUMS:
+  Cwift: 21a37e7ecd84056a2aca0a1f7cd549e55b706158
+
+PODFILE CHECKSUM: 2f6cbe388831ecd0c420b856ef8063e5ac070fe3
+
+COCOAPODS: 1.5.3
