@@ -21,14 +21,14 @@ extern "C" {
 typedef void * Person CWIFT_TYPE;
 typedef void * Census CWIFT_TYPE;
 
-typedef enum CWIFT_ENUM StateRegion {
-    StateRegionNorth,
-    StateRegionEast,
-    StateRegionSouth,
-    StateRegionWest
-} StateRegion;
+typedef enum CWIFT_ENUM Region {
+    RegionNorth,
+    RegionEast,
+    RegionSouth,
+    RegionWest
+} Region;
 
-Person  PersonCreate(int age, StateRegion region)               CWIFT_NAME(Person.create(age:region:));
+Person  PersonCreate(int age, Region region)               CWIFT_NAME(Person.create(age:region:));
 void    PersonDestroy(Person person);
 
 int     PersonGetAge(Person person)                             CWIFT_NAME(getter:Person.age(self:));
@@ -39,7 +39,7 @@ void    CensusDestroy(Census);
 
 void    CensusRecordPerson(Census census, Person person)        CWIFT_NAME(Census.record(self:person:));
 int     CensusGetAverageAge (Census census)                     CWIFT_NAME(Census.averageAge(self:));
-int     CensusGetPopulation (Census census, StateRegion region) CWIFT_NAME(Census.population(self:region:));
+int     CensusGetPopulation (Census census, Region region) CWIFT_NAME(Census.population(self:region:));
 
 #ifdef __cplusplus
 } // extern "C"

@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 let people = [Person.create(age: 10, region: .east),
               Person.create(age: 20, region: .north),
               Person.create(age: 30, region: .south),
@@ -35,7 +33,7 @@ if let hodor = Person.create(age: 5, region: .north) {
 
 print("The average age in TownVille in \(census.averageAge())")
 
-for region in [StateRegion.north, .east, .south, .west] {
+for region in [Region.north, .east, .south, .west] {
     print("The population in \(region) TownVille is \(census.population(region: region))")
 }
 
@@ -47,7 +45,7 @@ for person in people {
 
 // State Region is a C enum that can be imported into C++ C and Swift.
 // Extending with CustomStringConvertible.
-extension StateRegion : CustomStringConvertible {
+extension Region : CustomStringConvertible {
     public var description: String {
         switch self {
         case .north: return "North"
@@ -57,3 +55,4 @@ extension StateRegion : CustomStringConvertible {
         }
     }
 }
+

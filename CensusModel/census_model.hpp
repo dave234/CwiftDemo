@@ -10,7 +10,7 @@ namespace census_model {
 
     struct person {
         int age;
-        StateRegion region;
+        Region region;
     };
 
     class census {
@@ -27,7 +27,7 @@ namespace census_model {
             return total / _people.size();
         }
 
-        int getPopulation(StateRegion region) {
+        int getPopulation(Region region) {
             int total = 0;
             for (auto& p : _people)
                 total += p.region == region ? 1 : 0;

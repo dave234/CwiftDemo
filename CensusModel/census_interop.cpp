@@ -11,7 +11,7 @@
 
 //////// Person ////////////
 
-Person PersonCreate(int age, StateRegion region) { return
+Person PersonCreate(int age, Region region) { return
     (Person) new census_model::person {
         .age = age,
         .region = region
@@ -48,6 +48,6 @@ int CensusGetAverageAge (Census census) {
     return ((census_model::census *)census)->averageAge();
 }
 
-int CensusGetPopulation (Census census, StateRegion region) {
+int CensusGetPopulation (Census census, Region region) {
     return ((census_model::census *)census)->getPopulation(region);
 }
